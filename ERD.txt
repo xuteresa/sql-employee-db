@@ -1,0 +1,43 @@
+Departments
+-----
+dept_no PK int IDENTITY
+dept_name string
+
+dept_emp
+-----
+emp_no PK int FK -< employees.emp_no
+dept_no int FK - departments.dept_no
+from_date dateTime
+to_date dateTime
+
+dept_manager
+------
+dept_no int FK -< departments.dept_no
+emp_no PK int FK - employees.emp_no
+from_date dateTime
+to_date dateTime
+
+employees
+-----
+emp_no PK int IDENTITY
+birth_date dateTime
+first_name string
+last_name string
+gender string
+hire_date dateTime
+
+salaries
+-----
+emp_no PK int FK - employees.emp_no
+salary int
+from_date dateTime
+to_date dateTime
+
+titles
+-----
+emp_no PK int FK - employees.emp_no
+title string
+from_date dateTime
+to_date dateTime
+
+
